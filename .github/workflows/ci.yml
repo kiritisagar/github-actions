@@ -44,6 +44,6 @@ jobs:
         run: |
           curl -X POST \
             https://api.github.com/repos/kiritisagar/maven-project/dispatches \
-            -H "Authorization: token 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" \
+            -H "Authorization: token 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" \
             -H "Content-Type: application/json" \
             -d '{"event_type": "trigger-build"}'
