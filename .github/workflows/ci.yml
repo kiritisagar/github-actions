@@ -39,3 +39,11 @@ jobs:
       # Step 5: Run tests
       - name: Run tests
         run: mvn test
+# Step 6: Trigger workflow in another repository (maven-project) using repository_dispatch API
+      - name: Trigger workflow in maven-project repo
+        run: |
+          curl -X POST \
+            https://api.github.com/repos/kiritisagar/maven-project/dispatches \
+            -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{"event_type": "trigger-build"}'
