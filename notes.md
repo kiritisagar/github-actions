@@ -6,6 +6,7 @@ A workflow is an automated process that runs one or more jobs. Workflows are def
 Workflows can be triggered by events such as pushes, pull requests, issues, and scheduled times.
 
 
+
 # Jobs: 
 
 A job is a set of steps that execute on the same runner. Jobs can run sequentially or in parallel, depending on how they are defined.
